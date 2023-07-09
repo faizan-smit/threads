@@ -83,6 +83,12 @@ margin-bottom: 10px;
 }
 
 
+.delete-button svg{
+
+    pointer-events: none;
+    
+}
+
 #showdiv>div{
 
     background: linear-gradient(90deg, rgba(240,0,212,1) 0%, rgba(8,67,249,1) 100%);
@@ -213,6 +219,13 @@ margin-bottom: 10px;
     color: white;
     border: none;
     max-width: 20px;
+
+}
+
+.delete-comment svg {
+
+    pointer-events: none;
+
 
 }
 
