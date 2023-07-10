@@ -7,7 +7,13 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    overflow-x: hidden;
 
+}
+
+html{
+
+    overflow-x: hidden;
 
 }
 
@@ -24,17 +30,18 @@ body>center>a{
 .theduo {
 
     background: linear-gradient(266deg, rgba(255,0,174,1) 0%, rgba(0,77,247,1) 100%); 
-    min-width: 70vw;
+    width: 80vw;
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 20px;
+    margin: 10px auto;
     
 
 }
 
-.theduo button {
+.theduo-button {
 
-    width: 10rem;
+    width: 7rem;
     height: 4rem;
     text-align: center;
     padding: 0.5rem;
@@ -49,28 +56,67 @@ body>center>a{
 
 }
 
+.create-button{
+
+    width: 13rem;
+    height: 4rem;
+    text-align: center;
+    padding: 0.5rem;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    border-radius: 0.5rem;
+    border: 0.25rem solid white;
+    margin-left: 0.5rem;
+    background-color: rgba(255, 255, 255, 1);
+    color: rgb(255,0,174);
+    margin: 10px auto;
+    font-weight: bold;
+
+}
+
+.create-button:hover{
+
+    background-color: rgb(255,0,174);
+    color: #ffffff;
+    border: none !important;
+
+
+}
+
+.create-button:active{
+
+    background-color: rgba(0,77,247,1);
+    color: rgb(255,0,174);
+
+}
+
+
+
+
 .theduo textarea {
 
     border-radius: 1rem;
     background-color: rgba(31,32,34,1);
     cursor: pointer ;
     color: #ffffff;
-    width: 85%;
+    width: 100%;
     border: 2px solid #ffffff;
     padding: 10px;
+    min-height: 200px;
 
 }
 
 
-/* #showdiv{
+#showdiv{
 
     
-border: 2px solid #000000;
+/* border: 2px solid #000000; */
 padding: 10px;
 border-radius: 20px;
 margin-bottom: 10px;
+width: 100vw;
 
-} */
+}
 
 .delete-button{
 
@@ -257,7 +303,7 @@ margin-bottom: 10px;
     /* color: rgba(0,77,247,1); */
     border-radius: 1rem;
     text-align: center;
-    /* width: 85%; */
+    width: 100%;
     padding: 1rem;
 
 
@@ -329,12 +375,13 @@ margin-bottom: 10px;
 .posting-div{
 
     margin: none !important;
+    width: 100%;
 
 }
 
 .userLoggedin{
 
-    width: 70%;
+    width: 100%;
     min-height: 150px;
     background: linear-gradient(90deg, rgba(240,0,212,1) 0%, rgba(8,67,249,1) 100%);
     padding: 10px;
@@ -375,5 +422,45 @@ margin-bottom: 10px;
 
     text-decoration: none;
     color: rgba(8,67,249,1);
+
+}
+
+
+.forfade{
+
+    background: linear-gradient(90deg, rgba(240,0,212,0.3) 0%, rgba(8,67,249,0.3) 100%);
+
+    
+}
+
+
+#errorButton{
+
+    position: absolute;
+    top: -30000px;
+    left: -30000px;
+
+
+}
+
+#exampleModalLabel1{
+
+
+    color: #ff0033;
+    font-size: 30px !important;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+
+}
+
+.required{
+
+    color: #ff0033;
+
+}
+
+.theError{
+
+    color: #ff0033;
 
 }

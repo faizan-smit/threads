@@ -28,6 +28,9 @@ import { getFirestore, collection, addDoc, serverTimestamp, onSnapshot, doc, que
     const user = auth.currentUser;
 
 
+    if(thePost.trim().length != 0){
+
+
 
   try {
     const docRef = await addDoc(collection(db, "Posts"), {
@@ -43,6 +46,13 @@ import { getFirestore, collection, addDoc, serverTimestamp, onSnapshot, doc, que
   } catch (e) {
     console.error("Error adding document: ", e);
   }
+
+                                  }else{
+
+                                    document.getElementById("errorButton").click();
+
+
+                                  }
 
 
   });
@@ -325,6 +335,8 @@ document.getElementById('showdiv').addEventListener('click', async (event) => {
     let docId = event.target.getAttribute('ref')
     let theComment = event.target.parentNode.querySelector('input').value;
 
+    if(theComment.trim().length !== 0) {
+
     try {
       const docRef = await addDoc(collection(db, "Comments"), {
   
@@ -341,7 +353,14 @@ document.getElementById('showdiv').addEventListener('click', async (event) => {
     } catch (e) {
       console.error("Error adding document: ", e);
     }
-    // console.log(event.target.parentNode.firstChild.value);
+
+                                            }else{
+
+                                              document.getElementById("errorButton").click();
+
+
+                                            } 
+     // console.log(event.target.parentNode.firstChild.value);
 
 
     ///// Add event listener for delete comment button
