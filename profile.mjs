@@ -27,7 +27,7 @@ import { getFirestore, collection, addDoc, serverTimestamp, onSnapshot, doc, que
 const displayFunction = ()=>{
 
 
-    const q = query(collection(db, "Posts"), orderBy("timestamp"));
+    const q = query(collection(db, "Posts"), orderBy("timestamp", "desc"));
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
       let showDiv = document.getElementById("showdiv");
           showDiv.innerHTML = "";
